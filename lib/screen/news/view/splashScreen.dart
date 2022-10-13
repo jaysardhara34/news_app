@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   width: 300,
                   decoration:
                   BoxDecoration(borderRadius: BorderRadius.circular(30)),
-                  child: Lottie.network('https://assets1.lottiefiles.com/packages/lf20_yb7fmrm7.json'),
+                  child: Lottie.asset('assets/logo.json'),
                 ),
                 SizedBox(
                   height: 20,
