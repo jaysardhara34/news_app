@@ -18,7 +18,7 @@ class IndProvider extends ChangeNotifier {
   }
 
   Future<NewsModal> Apifactory(String data) async {
-    String newslike = "https://newsapi.org/v2/everything?q=$data&from=${DateTime.now().year}-${DateTime.now().month}-${DateTime.now().day}&sortBy=publishedAt&apiKey=9a17bf4238e64d38867439d521c6c0fb";
+    String newslike = "https://newsapi.org/v2/everything?q=$data&from=${DateTime.now().year}-${DateTime.now().month}-${DateTime.now().day}&sortBy=publishedAt&apiKey=0bb4fd579918484bb3f75871c88a6f52";
     var newsString = await http.get(Uri.parse(newslike));
     var newsjson = jsonDecode(newsString.body);
     return  NewsModal.fromJson(newsjson);

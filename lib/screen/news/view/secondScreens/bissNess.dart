@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:like_button/like_button.dart';
 import 'package:news_app/screen/news/provider/bissProvider.dart';
 import 'package:news_app/screen/news/provider/newsProvider.dart';
 import 'package:provider/provider.dart';
@@ -31,18 +32,42 @@ class _BissSecondState extends State<BissSecond> {
               icon: Icon(Icons.arrow_back_outlined),
             ),
             actions: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: Icon(Icons.favorite_border),
+              LikeButton(
+                size: 25,
+                circleColor:
+                CircleColor(start: Color(0xffb76060), end: Color(0xffa42929)),
+                bubblesColor: BubblesColor(
+                  dotPrimaryColor: Color(0xffee4b4b),
+                  dotSecondaryColor: Color(0xffef2d2d),
+                ),
+                likeBuilder: (bool isLiked) {
+                  return Icon(
+                    Icons.favorite_border,
+                    color: isLiked ? Colors.red : Colors.grey,
+                    size: 25,
+                  );
+                },
+                likeCount: 665,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: Icon(Icons.bookmark_outline),
+              IconButton(onPressed: () {}, icon: Icon(Icons.share)),
+              LikeButton(
+                size: 25,
+                circleColor:
+                CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
+                bubblesColor: BubblesColor(
+                  dotPrimaryColor: Color(0xff33b5e5),
+                  dotSecondaryColor: Color(0xff0099cc),
+                ),
+                likeBuilder: (bool isLiked) {
+                  return Icon(
+                    Icons.bookmark_border,
+                    color: isLiked ? Colors.deepPurpleAccent : Colors.grey,
+                    size: 25,
+                  );
+                },
+                likeCount: 999,
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 8),
-                child: Icon(Icons.share),
-              ),
+              SizedBox(width: 3,),
             ],
           ),
           body: SingleChildScrollView(

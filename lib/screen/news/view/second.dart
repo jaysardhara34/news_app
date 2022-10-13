@@ -32,7 +32,7 @@ class _news_apisecodeState extends State<news_apisecode> {
         ),
         actions: [
           LikeButton(
-            size: 20,
+            size: 25,
             circleColor:
                 CircleColor(start: Color(0xffb76060), end: Color(0xffa42929)),
             bubblesColor: BubblesColor(
@@ -43,14 +43,14 @@ class _news_apisecodeState extends State<news_apisecode> {
               return Icon(
                 Icons.favorite_border,
                 color: isLiked ? Colors.red : Colors.grey,
-                size: 20,
+                size: 25,
               );
             },
             likeCount: 665,
           ),
           IconButton(onPressed: () {}, icon: Icon(Icons.share)),
           LikeButton(
-            size: 20,
+            size: 25,
             circleColor:
                 CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
             bubblesColor: BubblesColor(
@@ -61,7 +61,7 @@ class _news_apisecodeState extends State<news_apisecode> {
               return Icon(
                 Icons.bookmark_border,
                 color: isLiked ? Colors.deepPurpleAccent : Colors.grey,
-                size: 20,
+                size: 25,
               );
             },
             likeCount: 999,
