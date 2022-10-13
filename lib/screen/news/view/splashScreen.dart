@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -23,13 +24,11 @@ class _SplashScreenState extends State<SplashScreen> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Container(
-                  height: 200,
-                  width: 200,
+                  height: 300,
+                  width: 300,
                   decoration:
                   BoxDecoration(borderRadius: BorderRadius.circular(30)),
-                  child: ClipRRect(
-                      borderRadius: BorderRadius.circular(30),
-                      child: Image.asset('assets/image/logo.png')),
+                  child: Lottie.network('https://assets1.lottiefiles.com/packages/lf20_yb7fmrm7.json'),
                 ),
                 SizedBox(
                   height: 20,

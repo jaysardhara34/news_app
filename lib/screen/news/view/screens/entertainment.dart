@@ -1,31 +1,33 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:news_app/screen/news/modal/newsModal.dart';
+import 'package:news_app/screen/news/provider/bissProvider.dart';
+import 'package:news_app/screen/news/provider/entProvider.dart';
 import 'package:news_app/screen/news/provider/newsProvider.dart';
 import 'package:provider/provider.dart';
 
 
-class newsApi_FirstScreen extends StatefulWidget {
-  const newsApi_FirstScreen({Key? key}) : super(key: key);
+class EntScreen extends StatefulWidget {
+  const EntScreen({Key? key}) : super(key: key);
 
   @override
-  State<newsApi_FirstScreen> createState() => _newsApi_FirstScreenState();
+  State<EntScreen> createState() => _EntScreenState();
 }
 
-class _newsApi_FirstScreenState extends State<newsApi_FirstScreen> {
+class _EntScreenState extends State<EntScreen> {
 
   final blue = const Color(0xff69695f);
   final backgroundLightFont = const Color(0xFF090909);
 
 
 
-  Api_Provider? apiproviderT;
-  Api_Provider? apiproviderF;
+  EnterProvider? apiproviderT;
+  EnterProvider? apiproviderF;
 
   @override
   Widget build(BuildContext context) {
-    apiproviderF = Provider.of<Api_Provider>(context, listen: false);
-    apiproviderT = Provider.of<Api_Provider>(context, listen: true);
+    apiproviderF = Provider.of<EnterProvider>(context, listen: false);
+    apiproviderT = Provider.of<EnterProvider>(context, listen: true);
     return SafeArea(
         child: Scaffold(
           backgroundColor: Colors.black,
@@ -37,15 +39,12 @@ class _newsApi_FirstScreenState extends State<newsApi_FirstScreen> {
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: [
-                    Button("apple"),
-                    Button("Google"),
-                    Button("Microsoft"),
-                    Button("Facebook"),
-                    Button("YouTube"),
-                    Button("Whatsap"),
-                    Button("Flutter"),
-                    Button("android "),
-                    Button("pub.dev"),
+                    Button("in"),
+                    Button("us"),
+                    Button("cn"),
+                    Button("kr"),
+                    Button("jp"),
+                    Button("ru"),
                   ],
                 ),
               ),
@@ -68,7 +67,7 @@ class _newsApi_FirstScreenState extends State<newsApi_FirstScreen> {
                         {
                           return InkWell(onTap: (){
                             apiproviderF!.Datapick = apimodel.articles![index];
-                            Navigator.pushNamed(context, 'secode');
+                            Navigator.pushNamed(context, 'esecode');
                           },
                             child: Column(
                               children: [

@@ -97,7 +97,7 @@ class _news_apisecodeState extends State<news_apisecode> {
                       topLeft: Radius.circular(30),
                       topRight: Radius.circular(30)),
                 ),
-                height: MediaQuery.of(context).size.height * 0.65,
+                height: MediaQuery.of(context).size.height * 0.90,
                 width: double.infinity,
                 child: Column(
                   children: [
@@ -222,11 +222,11 @@ class _news_apisecodeState extends State<news_apisecode> {
                           width: MediaQuery.of(context).size.width * 0.85,
                           child: Text(
                             "${apiproviderF!.Datapick!.content}",
-                            style: TextStyle(color: Colors.white),
+                             style: TextStyle(color: Colors.white),
                           )),
                     ),
                     SizedBox(
-                      height: 30,
+                      height: 16,
                     ),
                     Container(
                       margin: EdgeInsets.symmetric(horizontal: 20),
