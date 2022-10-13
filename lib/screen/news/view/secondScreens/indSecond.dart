@@ -4,6 +4,7 @@ import 'package:like_button/like_button.dart';
 import 'package:news_app/screen/news/provider/indProvider.dart';
 import 'package:news_app/screen/news/provider/newsProvider.dart';
 import 'package:provider/provider.dart';
+import 'package:share_plus/share_plus.dart';
 
 class IndSec extends StatefulWidget {
   const IndSec({Key? key}) : super(key: key);
@@ -23,7 +24,7 @@ class _IndSecState extends State<IndSec> {
     return SafeArea(
         child: Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
+      appBar: AppBar(iconTheme: IconThemeData(color: Colors.grey),
         backgroundColor: Color(0xff363535),
         leading: IconButton(
           onPressed: () {
@@ -33,7 +34,7 @@ class _IndSecState extends State<IndSec> {
         ),
         actions: [
           LikeButton(
-            size: 25,
+            size: 30,
             circleColor:
                 CircleColor(start: Color(0xffb76060), end: Color(0xffa42929)),
             bubblesColor: BubblesColor(
@@ -44,20 +45,21 @@ class _IndSecState extends State<IndSec> {
               return Icon(
                 Icons.favorite_border,
                 color: isLiked ? Colors.red : Colors.grey,
-                size: 25,
+                size: 30,
               );
             },
-            likeCount: 665,
           ),
           SizedBox(
             width: 7,
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.share)),
+          IconButton(onPressed: () async {
+            await Share.share('${apiproviderF!.Datapick!.url}',subject: 'Check this Amazing News');
+          }, icon: Icon(Icons.share)),
           SizedBox(
             width: 7,
           ),
           LikeButton(
-            size: 25,
+            size: 30,
             circleColor:
                 CircleColor(start: Color(0xff00ddff), end: Color(0xff0099cc)),
             bubblesColor: BubblesColor(
@@ -68,10 +70,9 @@ class _IndSecState extends State<IndSec> {
               return Icon(
                 Icons.bookmark_border,
                 color: isLiked ? Colors.deepPurpleAccent : Colors.grey,
-                size: 25,
+                size: 30,
               );
             },
-            likeCount: 999,
           ),
           SizedBox(
             width: 7,
