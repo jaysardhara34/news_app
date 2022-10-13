@@ -47,8 +47,8 @@ class _news_apisecodeState extends State<news_apisecode> {
               );
             },
             likeCount: 665,
-          ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.share)),
+          ),SizedBox(width: 7,),
+          IconButton(onPressed: () {}, icon: Icon(Icons.share)),SizedBox(width: 7,),
           LikeButton(
             size: 25,
             circleColor:
@@ -66,7 +66,7 @@ class _news_apisecodeState extends State<news_apisecode> {
             },
             likeCount: 999,
           ),
-          SizedBox(width: 3,),
+          SizedBox(width: 7,),
         ],
       ),
       body: SingleChildScrollView(
