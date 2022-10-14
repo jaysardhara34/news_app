@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:news_app/screen/news/provider/bissProvider.dart';
 import 'package:news_app/screen/news/provider/healthProvider.dart';
@@ -10,8 +9,6 @@ import 'package:news_app/screen/news/view/botomScreen.dart';
 import 'package:news_app/screen/news/view/first.dart';
 import 'package:news_app/screen/news/view/likePage.dart';
 import 'package:news_app/screen/news/view/newsPage.dart';
-import 'package:news_app/screen/news/view/screens/health.dart';
-import 'package:news_app/screen/news/view/screens/india.dart';
 import 'package:news_app/screen/news/view/second.dart';
 import 'package:news_app/screen/news/view/secondScreens/bissNess.dart';
 import 'package:news_app/screen/news/view/secondScreens/enterSecond.dart';
@@ -21,7 +18,6 @@ import 'package:news_app/screen/news/view/secondScreens/sportsSecond.dart';
 import 'package:news_app/screen/news/view/secondScreens/techSecond.dart';
 import 'package:news_app/screen/news/view/splashScreen.dart';
 import 'package:provider/provider.dart';
-
 import 'screen/news/provider/botomProvider.dart';
 import 'screen/news/provider/entProvider.dart';
 import 'screen/news/provider/sportsProvider.dart';

@@ -33,42 +33,45 @@ class _api_tabbarState extends State<api_tabbar> {
                 itemBuilder: (context) {
                   return [
                     PopupMenuItem(
-                      onTap: () {
-                        print('Liked');
-                        Navigator.push(context);
-                      },
-                      child: Row(
-                        children: [
-                          Icon(Icons.favorite_border),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Text(
-                            'Likes',
-                            style: TextStyle(
-                              color: Color(0xffffffff),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, 'like');
+                        },
+                        child: Row(
+                          children: [
+                            Icon(Icons.favorite_border),
+                            SizedBox(
+                              width: 8,
                             ),
-                          ),
-                        ],
+                            Text(
+                              'Likes',
+                              style: TextStyle(
+                                color: Color(0xffffffff),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     PopupMenuItem(
-                      onTap: () {
-                        Navigator.pushNamed(context, 'book');
-                      },
-                      child: Row(
-                        children: [
-                          Icon(Icons.bookmark_border),
-                          SizedBox(
-                            width: 8,
-                          ),
-                          Text(
-                            'Bookmarks',
-                            style: TextStyle(
-                              color: Color(0xffffffff),
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, 'book');
+                        },
+                        child: Row(
+                          children: [
+                            Icon(Icons.bookmark_border),
+                            SizedBox(
+                              width: 8,
                             ),
-                          ),
-                        ],
+                            Text(
+                              'Bookmarks',
+                              style: TextStyle(
+                                color: Color(0xffffffff),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ];

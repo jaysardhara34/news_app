@@ -54,7 +54,7 @@ class _news_apisecodeState extends State<news_apisecode> {
           ),
           IconButton(
               onPressed: () async {
-                await Share.share('${apiproviderF!.Datapick!.url}',subject: 'Check this Amazing News');
+                await Share.share('Check this Amazing News  ${apiproviderF!.Datapick!.url}');
               },
               icon: Icon(Icons.share)),
           SizedBox(

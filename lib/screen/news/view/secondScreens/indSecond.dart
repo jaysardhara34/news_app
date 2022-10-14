@@ -53,7 +53,7 @@ class _IndSecState extends State<IndSec> {
             width: 7,
           ),
           IconButton(onPressed: () async {
-            await Share.share('${apiproviderF!.Datapick!.url}',subject: 'Check this Amazing News');
+            await Share.share('Check this Amazing News  ${apiproviderF!.Datapick!.url}');
           }, icon: Icon(Icons.share)),
           SizedBox(
             width: 7,

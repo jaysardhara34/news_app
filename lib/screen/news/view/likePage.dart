@@ -23,7 +23,7 @@ class _LikePageState extends State<LikePage> {
         backgroundColor: Colors.black,
         appBar: AppBar(
           backgroundColor: Color(0xff363535),
-          title: Text("Like"),
+          title: Text("Likes"),
         ),
         body: Column(
           children: [
