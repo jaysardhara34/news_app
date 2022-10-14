@@ -5,8 +5,10 @@ import 'package:news_app/screen/news/provider/healthProvider.dart';
 import 'package:news_app/screen/news/provider/indProvider.dart';
 import 'package:news_app/screen/news/provider/newsProvider.dart';
 import 'package:news_app/screen/news/view/Tabbar.dart';
+import 'package:news_app/screen/news/view/bookmarkPage.dart';
 import 'package:news_app/screen/news/view/botomScreen.dart';
 import 'package:news_app/screen/news/view/first.dart';
+import 'package:news_app/screen/news/view/likePage.dart';
 import 'package:news_app/screen/news/view/newsPage.dart';
 import 'package:news_app/screen/news/view/screens/health.dart';
 import 'package:news_app/screen/news/view/screens/india.dart';
@@ -53,8 +55,8 @@ void main(){
             'ssecode':(context)=>SportSecond(),
             'tsecode':(context)=>TechSecond(),
             'news':(context)=>WebView_Screen(),
-            'india':(context)=>IndiaScreen(),
-            'health':(context)=>HealthScreen(),
+            'like':(context)=>LikePage(),
+            'book':(context)=>BookmarkPage(),
           },
         ),
       )

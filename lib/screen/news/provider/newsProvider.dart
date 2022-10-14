@@ -10,6 +10,12 @@ class Api_Provider extends ChangeNotifier {
 
   Articles? Datapick;
   String searchdata = "apple";
+  List<Articles>cart = [];
+
+  void  remove(int index) {
+    cart.removeAt(index);
+    notifyListeners();
+  }
 
   void changeData(String newdata)
   {
